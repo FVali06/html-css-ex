@@ -1,0 +1,49 @@
+/* Setează box-sizing pentru toate elementele pentru a include marginile și padding-ul în dimensiunile totale */
+* {
+  box-sizing: border-box;
+}
+
+/* Stilizează elementul body */
+body {
+  margin: 0; /* Elimină marginile implicite */
+  font-family: sans-serif; /* Setează fontul pentru text */
+  background: #f5f6f7; /* Setează culoarea de fundal */
+}
+
+/* Stilizează elementul cu clasa .header */
+.header {
+  text-align: center; /* Centrează textul */
+  text-transform: uppercase; /* Transformă textul în litere mari */
+  padding: 32px; /* Adaugă padding de 32px în toate direcțiile */
+  background-color: #0a0a23; /* Setează culoarea de fundal */
+  color: #fff; /* Setează culoarea textului */
+  border-bottom: 4px solid #fdb347; /* Adaugă o bordură în partea de jos */
+}
+
+/* Stilizează containerul galerie */
+.gallery {
+  display: flex; /* Afișează elementele ca flexbox */
+  flex-direction: row; /* Dispune elementele în rând */
+  flex-wrap: wrap; /* Permite elementelor să treacă pe un nou rând */
+  justify-content: center; /* Centrează elementele pe axa orizontală */
+  align-items: center; /* Centrează elementele pe axa verticală */
+  gap: 16px; /* Adaugă spațiu între elemente */
+  max-width: 1400px; /* Setează lățimea maximă */
+  margin: 0 auto; /* Centrează containerul pe pagină */
+  padding: 20px 10px; /* Adaugă padding: 20px sus/jos, 10px stânga/dreapta */
+}
+
+/* Stilizează imaginile din galerie */
+.gallery img {
+  width: 100%; /* Setează lățimea să fie 100% din containerul părinte */
+  max-width: 350px; /* Setează lățimea maximă a imaginii */
+  height: 300px; /* Setează înălțimea fixă a imaginii */
+  object-fit: cover; /* Asigură că imaginea umple containerul fără a distorsiona */
+  border-radius: 10px; /* Rotunjește colțurile imaginii */
+}
+
+/* Adaugă un pseudo-element după elementul .gallery */
+.gallery::after {
+  content: ""; /* Creează un element gol */
+  width: 350px; /* Setează lățimea pseudo-elementului */
+}
